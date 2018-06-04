@@ -1,0 +1,68 @@
+git config --global user.name "xxx"  #在git中添加用户名
+
+git config --global user.email "xxx"	#在git中添加邮箱
+
+
+git init #建立版本库
+
+touch 1.py #创建一个名为“1.py”的文件
+
+git status	#查看版本库的状态
+
+git add 1.py	#添加1.py到版本库
+
+git add .	#添加文件夹下的所有文件到版本库
+
+git commit -m "create 1.py"  #提交改变，-m用于自定义本次改变的信息
+
+git log	#查看版本库的log记录
+
+git diff #查看尚未add的改变和之前的commit有什么不同
+
+git diff --cached	#查看已经add的文件。。。
+
+git diff HEAD 	#查看尚未add的文件和已经add的文件。。。。
+
+git commit --amend --noedit	#不编辑，直接合并到上一个commit
+
+git log --oneline	#每个commit内容显示在一行
+
+git status -s	#查看状态，格式更好点
+
+git reset 1.py 	#回到上一次修改前的状态
+
+git reset --hard HEAD	#回到上一次的commit
+
+git reset --hard cyru2a1	#回到特定的修改点
+
+git checkout cyru2a1 -- 1.py	#回到单个文件的某修改点
+
+git log --oneline --graph	#观看分支log
+
+git branch dev	#建立dev分支
+
+git branch	#查看当前分支
+
+git checkout dev	#切换分支到dev
+
+git commit -am "change 3 in dev"	#add所有改变并直接commit
+
+git merge dev	#合并dev到master（需先切换到master分支再操作）
+
+git stash	#暂存分支
+
+git stash list	#查看stash中的缓存
+
+git stash pop	#恢复暂存的分支
+
+git checkout -b boss	#创建并切换到boss分支
+
+git remote add origin https://github.com/MorvanZhou/git-demo.git #连接在线库
+
+git push -u origin master     # 推送本地 master 去 origin
+
+git push -u origin dev        # 推送本地 dev  去 origin
+
+
+
+
